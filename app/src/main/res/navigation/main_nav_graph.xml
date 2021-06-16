@@ -1,15 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_nav_graph"
-    app:startDestination="@id/dummyHome">
+    app:startDestination="@id/home">
 
     <fragment
-        android:id="@+id/dummyHome"
+        android:id="@+id/home"
+        android:tag = "Home"
+        android:name="com.gmachine.bottomnavigationlagssample.HomeFragment"
+        tools:layout="@layout/fragment_home">
+    </fragment>
+
+    <fragment
+        android:id="@+id/search"
         android:tag = "Search"
-        android:name="com.super_deals.DummyFragment"
-        android:label="DummyHomeFragment"
-        tools:layout="@layout/simple_recycler">
+        android:name="com.gmachine.bottomnavigationlagssample.SearchFragment"
+        tools:layout="@layout/fragment_search">
+    </fragment>
+
+    <fragment
+        android:id="@+id/settings"
+        android:tag = "Settings"
+        android:name="com.gmachine.bottomnavigationlagssample.SettingsFragment"
+        tools:layout="@layout/fragment_settings">
     </fragment>
 
 </navigation>
